@@ -2,6 +2,7 @@ import torch
 from PIL import Image
 from transformers import AutoProcessor, AutoModelForZeroShotObjectDetection
 import os
+import requests
 
 def extract_and_save_cards(image_path, output_dir="output"):
     """
@@ -55,8 +56,6 @@ def extract_and_save_cards(image_path, output_dir="output"):
         output_path = os.path.join(output_dir, f"card_{i+1}.png")
         card_image.save(output_path)
         print(f"Saved card to {output_path}")
-
-import requests
 
 if __name__ == "__main__":
     # Example usage:
