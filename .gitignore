@@ -1,0 +1,5 @@
+# Ignore the output directory
+output/
+
+# Ignore downloaded and test images
+*.jpg
